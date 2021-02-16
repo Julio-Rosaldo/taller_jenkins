@@ -16,6 +16,12 @@ pipeline {
       }
     }
 
+    stage('Despedida') {
+      steps {
+        input(message: 'Ya termino el taller', ok: 'Buen taller')
+      }
+    }
+
   }
   environment {
     Nombre = 'Julio'
