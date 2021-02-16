@@ -10,6 +10,7 @@ pipeline {
     stage('Crear archivo') {
       steps {
         writeFile(file: 'salida.txt', text: 'Mensaje de salida')
+        archiveArtifacts '*.txt'
       }
     }
 
