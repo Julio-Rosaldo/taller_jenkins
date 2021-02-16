@@ -4,7 +4,12 @@ pipeline {
     stage('Hola_mundo') {
       steps {
         echo 'Hola Mundo'
-        sh 'echo %PATH%'
+      }
+    }
+
+    stage('Crear archivo') {
+      steps {
+        writeFile(file: 'salida.txt', text: 'Mensaje de salida')
       }
     }
 
