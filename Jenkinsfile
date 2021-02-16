@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'Hola Julio'
         bat 'SET'
+        bat 'echo %Nombre%'
       }
     }
 
@@ -17,6 +18,6 @@ pipeline {
 
   }
   environment {
-    Nombre = 'Valor'
+    Nombre = 'Julio'
   }
 }
